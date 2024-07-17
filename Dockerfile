@@ -6,7 +6,7 @@ ARG DOCKER_VERSION=20.10.14
 ARG KUBECTL_VERSION=1.22.3
 ARG JQ_VERSION=1.6
 
-FROM golang:1.17 as builder
+FROM golang:1.22 as builder
 
 RUN apt-get update && apt-get --no-install-recommends install -y \
     git \
@@ -79,7 +79,7 @@ RUN NODE_OPTIONS="--max-old-space-size=2048" JOBS=max yarn --cwd ui build
 
 ####################################################################################################
 
-FROM golang:1.17 as argoexec-build
+FROM golang:1.22 as argoexec-build
 
 COPY hack/arch.sh hack/os.sh /bin/
 
@@ -101,7 +101,7 @@ RUN setcap CAP_SYS_PTRACE,CAP_SYS_CHROOT+ei dist/argoexec
 
 ####################################################################################################
 
-FROM golang:1.17 as workflow-controller-build
+FROM golang:1.22 as workflow-controller-build
 
 # Tell git to forget about all of the files that were not included because of .dockerignore in order to ensure that
 # the git state is "clean" even though said .dockerignore files are not present
@@ -112,7 +112,7 @@ RUN --mount=type=cache,target=/root/.cache/go-build make dist/workflow-controlle
 
 ####################################################################################################
 
-FROM golang:1.17 as argocli-build
+FROM golang:1.22 as argocli-build
 
 RUN mkdir -p ui/dist
 COPY --from=argo-ui ui/dist/app ui/dist/app
