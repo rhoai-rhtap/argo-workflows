@@ -39,7 +39,7 @@ COPY . .
 
 ####################################################################################################
 
-FROM alpine:3 as argoexec-base
+FROM alpine:3.14 as argoexec-base
 
 ARG DOCKER_CHANNEL
 ARG DOCKER_VERSION
