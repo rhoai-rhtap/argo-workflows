@@ -39,7 +39,7 @@ COPY . .
 
 ####################################################################################################
 
-FROM alpine:3.14 as argoexec-base
+FROM alpine:3.20 as argoexec-base
 
 ARG DOCKER_CHANNEL
 ARG DOCKER_VERSION
@@ -129,7 +129,7 @@ RUN --mount=type=cache,target=/root/.cache/go-build make dist/argo
 
 ####################################################################################################
 
-FROM alpine:3.14 as argoexec
+FROM alpine:3.20 as argoexec
 
 COPY --from=argoexec-build /go/src/github.com/argoproj/argo-workflows/dist/argoexec /usr/local/bin/
 COPY --from=argoexec-build /etc/mime.types /etc/mime.types
