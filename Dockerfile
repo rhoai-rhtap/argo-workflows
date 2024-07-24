@@ -68,7 +68,9 @@ COPY hack/nsswitch.conf /etc/
 
 FROM node:16 as argo-ui
 
-COPY ui/package-lock.json ui/yarn.lock ui/
+#COPY ui/package-lock.json ui/yarn.lock ui/
+
+COPY ./ui/package.json ./ui/yarn.lock /path/in/container/ui/
 
 RUN JOBS=max yarn --cwd ui install --network-timeout 1000000
 
