@@ -70,6 +70,8 @@ FROM node:16 as argo-ui
 
 COPY ui/package.json ui/yarn.lock ui/
 
+RUN cachi2 fetch-deps --source ./sample-yarn-app --output ./cachi2-output yarn
+
 RUN JOBS=max yarn --cwd ui install --network-timeout 1000000
 
 COPY ui ui
