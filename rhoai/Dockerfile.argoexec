@@ -27,8 +27,8 @@ RUN dnf install -y \
     bash \
     mailcap
 
-COPY ${SOURCE_CODE}/go.mod .
-COPY ${SOURCE_CODE}/go.sum .
+COPY go.mod .
+COPY go.sum .
 
 RUN if [ -z ${CACHITO_ENV_FILE} ]; then \
        go mod download; \
