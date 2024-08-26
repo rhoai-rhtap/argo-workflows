@@ -15,17 +15,23 @@ WORKDIR /workspace
 USER root
 RUN dnf install -y mailcap
 
+# Copy Go module files first to leverage Docker layer caching
 COPY ${SOURCE_CODE}/go.mod .
 COPY ${SOURCE_CODE}/go.sum .
+
+# Download dependencies early to utilize cache more effectively
+RUN go mod download
+
+# Copy the rest of the source code
 COPY ${SOURCE_CODE}/ ./
 
+# Set the /workspace directory as safe for Git
 RUN git config --global --add safe.directory /workspace
 
-#RUN --mount=type=cache,target=/go/pkg/mod --mount=type=cache,target=/root/.cache/go-build make dist/argoexec GIT_COMMIT=${GIT_COMMIT} GIT_TAG=${GIT_TAG} GIT_TREE_STATE=${GIT_TREE_STATE}
-
+# Run the build with caching and disable VCS stamping
 RUN --mount=type=cache,target=/go/pkg/mod --mount=type=cache,target=/root/.cache/go-build \
-    make dist/argoexec GIT_COMMIT=${GIT_COMMIT} GIT_TAG=${GIT_TAG} GIT_TREE_STATE=${GIT_TREE_STATE} \
-    GOFLAGS="-buildvcs=false"
+    GOFLAGS="-buildvcs=false" \
+    make dist/argoexec GIT_COMMIT=${GIT_COMMIT} GIT_TAG=${GIT_TAG} GIT_TREE_STATE=${GIT_TREE_STATE}
 
 
 ####################################################################################################
