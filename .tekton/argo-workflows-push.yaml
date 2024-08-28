@@ -27,12 +27,6 @@ spec:
     value: rhoai/Dockerfile.argoexec
   - name: path-context
     value: .
-  - name: snapshot-url
-    type: string
-    description: URL to fetch the snapshot containing the latest image digests
-  - name: csv-file-path
-    type: string
-    description: Path to the CSV file where image digests will be updated
   pipelineSpec:
     finally:
     - name: show-sbom
@@ -161,16 +155,6 @@ spec:
         - name: kind
           value: task
         resolver: bundles
-    - name: fetch-latest-digests
-      taskRef:
-        name: fetch-latest-image-digests
-      params:
-        - name: snapshot-url
-          value: $(params.snapshot-url)
-        - name: csv-file-path
-          value: $(params.csv-file-path)
-      runAfter:
-        - init
     - name: clone-repository
       params:
       - name: url
