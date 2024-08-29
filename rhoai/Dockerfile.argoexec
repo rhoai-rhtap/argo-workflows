@@ -6,11 +6,11 @@ ARG GIT_COMMIT=unknown
 ARG GIT_TAG=unknown
 ARG GIT_TREE_STATE=unknown
 
-FROM registry.access.redhat.com/ubi8/ubi:latest AS builder
+#FROM registry.access.redhat.com/ubi8/ubi:latest AS builder
 
-ARG GOLANG_VERSION=1.21
+#ARG GOLANG_VERSION=1.21
 
-#FROM registry.redhat.io/ubi8/go-toolset:1.21 as builder
+FROM registry.redhat.io/ubi8/go-toolset:1.21 as builder
 
 # Build args to be used at this step
 ARG SOURCE_CODE
@@ -18,11 +18,6 @@ WORKDIR /workspace
 
 USER root
 RUN dnf install -y mailcap
-
-# Install Go
-ENV PATH=/usr/local/go/bin:$PATH
-
-COPY --from=golang /usr/lib/golang /usr/local/go
 
 WORKDIR /workspace
 
