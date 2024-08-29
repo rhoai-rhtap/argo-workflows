@@ -30,7 +30,6 @@ RUN git config --global --add safe.directory /workspace
 
 # Run the build with caching and disable VCS stamping
 RUN --mount=type=cache,target=/go/pkg/mod --mount=type=cache,target=/root/.cache/go-build \
-    GOFLAGS="-buildvcs=false" \
     make dist/argoexec GIT_COMMIT=${GIT_COMMIT} GIT_TAG=${GIT_TAG} GIT_TREE_STATE=${GIT_TREE_STATE}
 
 
