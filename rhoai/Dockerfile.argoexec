@@ -19,6 +19,13 @@ WORKDIR /workspace
 USER root
 RUN dnf install -y mailcap
 
+# Install Go
+ENV PATH=/usr/local/go/bin:$PATH
+
+COPY --from=golang /usr/lib/golang /usr/local/go
+
+WORKDIR /workspace
+
 # Copy Go module files first to leverage Docker layer caching
 COPY ${SOURCE_CODE}/go.mod .
 COPY ${SOURCE_CODE}/go.sum .
