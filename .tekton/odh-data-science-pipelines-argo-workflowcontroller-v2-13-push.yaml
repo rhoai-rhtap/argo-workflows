@@ -22,7 +22,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller:{{revision}}
+    value: quay.io/rhoai/odh-data-science-pipelines-argo-workflowcontroller-rhel8:{{revision}}
   - name: dockerfile
     value: rhoai/Dockerfile.workflowcontroller
   - name: path-context
