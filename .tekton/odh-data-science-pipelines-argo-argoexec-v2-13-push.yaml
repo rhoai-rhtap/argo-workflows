@@ -22,7 +22,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/rhoai/odh-data-science-pipelines-argo-argoexec:{{revision}}
+    value: quay.io/rhoai/odh-data-science-pipelines-argo-argoexec-rhel8:{{revision}}
   - name: dockerfile
     value: rhoai/Dockerfile.argoexec
   - name: path-context
