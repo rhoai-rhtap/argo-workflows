@@ -1,12 +1,13 @@
 ARG SOURCE_CODE=.
-ARG CI_CONTAINER_VERSION="unknown"
-ARG CI_CONTAINER_RELEASE="unknown"
+
+#rhoai-2.13-1
+
 # Builder args
 ARG GIT_COMMIT=unknown
 ARG GIT_TAG=unknown
 ARG GIT_TREE_STATE=unknown
 
-FROM registry.access.redhat.com/ubi8/go-toolset:1.21 as builder
+FROM registry.redhat.io/ubi8/go-toolset:1.21@sha256:742ae6ec1aef3e7faae488c47695fb64964d342aefecf52d23bd9d5e6731d0b6 as builder
 
 # Build args to be used at this step
 ARG SOURCE_CODE
@@ -15,28 +16,19 @@ WORKDIR /workspace
 USER root
 RUN dnf install -y mailcap
 
-WORKDIR /workspace
-
-# Copy Go module files first to leverage Docker layer caching
 COPY ${SOURCE_CODE}/go.mod .
 COPY ${SOURCE_CODE}/go.sum .
-
-# Download dependencies early to utilize cache more effectively
-RUN go mod download
-
-# Copy the rest of the source code
 COPY ${SOURCE_CODE}/ ./
 
 # Set the /workspace directory as safe for Git
 RUN git config --global --add safe.directory /workspace
 
-# Run the build with caching and disable VCS stamping
-RUN --mount=type=cache,target=/go/pkg/mod --mount=type=cache,target=/root/.cache/go-build \
-    make dist/argoexec GIT_COMMIT=${GIT_COMMIT} GIT_TAG=${GIT_TAG} GIT_TREE_STATE=${GIT_TREE_STATE}
+RUN --mount=type=cache,target=/go/pkg/mod --mount=type=cache,target=/root/.cache/go-build make dist/argoexec GIT_COMMIT=${GIT_COMMIT} GIT_TAG=${GIT_TAG} GIT_TREE_STATE=${GIT_TREE_STATE}
 
 
 ####################################################################################################
-FROM registry.access.redhat.com/ubi8/ubi:latest AS argoexec
+FROM registry.redhat.io/ubi8/ubi-minimal@sha256:cf095e5668919ba1b4ace3888107684ad9d587b1830d3eb56973e6a54f456e67 AS argoexec
+
 
 ARG CI_CONTAINER_VERSION
 
