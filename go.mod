@@ -205,7 +205,7 @@ replace (
 	github.com/cloudevents/sdk-go/v2 v2.10.0 => github.com/cloudevents/sdk-go/v2 v2.15.1
 	github.com/cloudevents/sdk-go/v2 v2.8.0 => github.com/cloudevents/sdk-go/v2 v2.15.1
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible => github.com/dgrijalva/jwt-go/v4 v4.0.0-preview1
-	github.com/go-git/go-git/v5 => github.com/argoproj-labs/go-git/v5 v5.4.4
+	github.com/go-git/go-git/v5 => github.com/argoproj-labs/go-git/v5 v5.4.7
 	github.com/go-jose/go-jose/v3 v3.0.0 => github.com/go-jose/go-jose/v3 v3.0.1
 	github.com/labstack/echo v3.2.1+incompatible => github.com/labstack/echo/v4 v4.9.0
 	github.com/nats-io/nats-server/v2 v2.7.2 => github.com/nats-io/nats-server/v2 v2.10.2
