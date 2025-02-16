@@ -9,7 +9,7 @@ require (
 	github.com/TwinProduction/go-color v0.0.3
 	github.com/aliyun/aliyun-oss-go-sdk v2.2.1+incompatible
 	github.com/antonmedv/expr v1.9.0
-	github.com/argoproj-labs/argo-dataflow v0.10.0
+	github.com/argoproj-labs/argo-dataflow v0.10.3
 	github.com/argoproj/argo-events v0.17.1-0.20220223155401-ddda8800f9f8
 	github.com/argoproj/pkg v0.13.1
 	github.com/baiyubin/aliyun-sts-go-sdk v0.0.0-20180326062324-cfa1a18b161f // indirect
@@ -36,7 +36,7 @@ require (
 	github.com/mitchellh/go-ps v0.0.0-20190716172923-621e5597135b
 	github.com/prometheus/client_golang v1.12.2
 	github.com/prometheus/client_model v0.4.0
-	github.com/prometheus/common v0.32.1
+	github.com/prometheus/common v0.35.0
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/sirupsen/logrus v1.8.1
@@ -105,7 +105,7 @@ require (
 	github.com/go-git/go-billy/v5 v5.3.1 // indirect
 	github.com/go-git/go-git/v5 v5.4.2
 	github.com/go-jose/go-jose/v3 v3.0.0
-	github.com/go-logr/logr v1.2.2 // indirect
+	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/go-openapi/jsonpointer v0.19.5 // indirect
 	github.com/go-openapi/swag v0.19.15 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
