@@ -33,7 +33,7 @@ require (
 	github.com/imkira/go-interpol v1.1.0 // indirect
 	github.com/klauspost/pgzip v1.2.5
 	github.com/minio/minio-go/v7 v7.0.27
-	github.com/mitchellh/go-ps v0.0.0-20190716172923-621e5597135b
+	github.com/mitchellh/go-ps v1.0.0
 	github.com/prometheus/client_golang v1.12.2
 	github.com/prometheus/client_model v0.4.0
 	github.com/prometheus/common v0.32.1
