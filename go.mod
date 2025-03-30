@@ -59,7 +59,6 @@ require (
 	google.golang.org/genproto v0.0.0-20230711160842-782d3b101e98 // indirect
 	google.golang.org/grpc v1.56.2
 	gopkg.in/go-playground/webhooks.v5 v5.17.0
-	gopkg.in/jcmturner/gokrb5.v5 v5.3.0
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22 // indirect
 	k8s.io/api v0.24.3
 	k8s.io/apimachinery v0.24.3
@@ -189,6 +188,7 @@ require (
 require (
 	golang.org/x/net v0.12.0
 	google.golang.org/genproto/googleapis/api v0.0.0-20230711160842-782d3b101e98
+	gopkg.in/jcmturner/gokrb5.v5 v5.3.0
 )
 
 require (
