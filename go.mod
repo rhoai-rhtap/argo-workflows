@@ -1,6 +1,8 @@
 module github.com/argoproj/argo-workflows/v3
 
-go 1.21
+go 1.22
+
+toolchain go1.24.6
 
 require (
 	cloud.google.com/go/storage v1.30.1
@@ -89,7 +91,7 @@ require (
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
 	github.com/acomagu/bufpipe v1.0.3 // indirect
 	github.com/ajg/form v1.5.1 // indirect
-	github.com/andybalholm/brotli v1.0.4 // indirect
+	github.com/andybalholm/brotli v1.2.0 // indirect
 	github.com/awalterschulze/gographviz v0.0.0-20200901124122-0eecad45bd71 // indirect
 	github.com/aws/aws-sdk-go v1.44.27 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
