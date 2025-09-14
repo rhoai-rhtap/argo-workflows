@@ -1,6 +1,8 @@
 module github.com/argoproj/argo-workflows/v3
 
-go 1.21
+go 1.21.0
+
+toolchain go1.24.6
 
 require (
 	cloud.google.com/go/storage v1.30.1
@@ -152,7 +154,7 @@ require (
 	github.com/sergi/go-diff v1.1.0 // indirect
 	github.com/shopspring/decimal v1.2.0 // indirect
 	github.com/spf13/afero v1.9.2 // indirect
-	github.com/spf13/cast v1.5.0 // indirect
+	github.com/spf13/cast v1.10.0 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/stretchr/objx v0.5.0 // indirect
 	github.com/subosito/gotenv v1.3.0 // indirect
