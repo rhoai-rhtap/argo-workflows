@@ -1,6 +1,8 @@
 module github.com/argoproj/argo-workflows/v3
 
-go 1.21
+go 1.24.0
+
+toolchain go1.24.6
 
 require (
 	cloud.google.com/go/storage v1.30.1
@@ -15,7 +17,7 @@ require (
 	github.com/baiyubin/aliyun-sts-go-sdk v0.0.0-20180326062324-cfa1a18b161f // indirect
 	github.com/blushft/go-diagrams v0.0.0-20201006005127-c78c821223d9
 	github.com/colinmarc/hdfs v1.1.4-0.20180805212432-9746310a4d31
-	github.com/coreos/go-oidc/v3 v3.1.0
+	github.com/coreos/go-oidc/v3 v3.16.0
 	github.com/doublerebel/bellows v0.0.0-20160303004610-f177d92a03d3
 	github.com/emicklei/go-restful/v3 v3.8.0 // indirect
 	github.com/evanphx/json-patch v5.6.0+incompatible
@@ -52,7 +54,7 @@ require (
 	github.com/xeipuuv/gojsonpointer v0.0.0-20190905194746-02993c407bfb // indirect
 	github.com/xeipuuv/gojsonschema v1.2.0
 	golang.org/x/crypto v0.14.0
-	golang.org/x/oauth2 v0.10.0
+	golang.org/x/oauth2 v0.28.0
 	golang.org/x/sync v0.3.0
 	golang.org/x/time v0.3.0
 	google.golang.org/api v0.126.0
@@ -73,7 +75,6 @@ require (
 
 require (
 	cloud.google.com/go v0.110.4 // indirect
-	cloud.google.com/go/compute v1.21.0 // indirect
 	cloud.google.com/go/iam v1.1.1 // indirect
 	github.com/Azure/go-autorest v14.2.0+incompatible // indirect
 	github.com/Azure/go-autorest/autorest v0.11.18 // indirect
@@ -176,7 +177,6 @@ require (
 	gopkg.in/jcmturner/aescts.v1 v1.0.1 // indirect
 	gopkg.in/jcmturner/dnsutils.v1 v1.0.1 // indirect
 	gopkg.in/jcmturner/rpc.v0 v0.0.2 // indirect
-	gopkg.in/square/go-jose.v2 v2.6.0 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
@@ -192,7 +192,8 @@ require (
 )
 
 require (
-	cloud.google.com/go/compute/metadata v0.2.3 // indirect
+	cloud.google.com/go/compute/metadata v0.3.0 // indirect
+	github.com/go-jose/go-jose/v4 v4.1.3 // indirect
 	github.com/google/s2a-go v0.1.4 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.2.3 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.1 // indirect
