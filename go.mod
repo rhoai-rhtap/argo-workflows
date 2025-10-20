@@ -1,6 +1,8 @@
 module github.com/argoproj/argo-workflows/v3
 
-go 1.21
+go 1.23
+
+toolchain go1.24.6
 
 require (
 	cloud.google.com/go/storage v1.30.1
@@ -126,7 +128,7 @@ require (
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/kevinburke/ssh_config v1.2.0 // indirect
-	github.com/klauspost/compress v1.15.9 // indirect
+	github.com/klauspost/compress v1.18.1 // indirect
 	github.com/klauspost/cpuid v1.3.1 // indirect
 	github.com/lib/pq v1.10.4 // indirect
 	github.com/magiconair/properties v1.8.6 // indirect
