@@ -1334,9 +1334,9 @@
   integrity sha512-UEyp8LwZ4Dg30kVU2Q3amHHyTn1jEdhCIE59ANed76GaT1Vp76DD3ZWSAxgCrw6wJ0TqeoBpqmfUHiUDPs//HQ==
 
 "@types/prop-types@*":
-  version "15.7.3"
-  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
-  integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
+  version "15.7.15"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.15.tgz#e6e5a86d602beaca71ce5163fadf5f95d70931c7"
+  integrity sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==
 
 "@types/prop-types@^15.5.2":
   version "15.5.4"
@@ -1368,11 +1368,11 @@
     "@types/react" "*"
 
 "@types/react-form@^2.16.1":
-  version "2.16.8"
-  resolved "https://registry.yarnpkg.com/@types/react-form/-/react-form-2.16.8.tgz#4624567c4988c5d472e9d08e3670a623b2c1c2c1"
-  integrity sha512-+e8OEJ8iKNy+zYxzycCZIqwbmav7WBgIsiYRLjDhUl+DtGZ77YEv86u927b9TLu00oHZTG0U3LjWUbdDwQU63A==
+  version "2.16.15"
+  resolved "https://registry.yarnpkg.com/@types/react-form/-/react-form-2.16.15.tgz#2469ce9e026f0576b2e9b9f58e51cc82fd61169c"
+  integrity sha512-uyonTWluQD07Nzf+lBpzr7kkNyd2bFD/y75WReZ+0/Fe9V6smQjJ1tEUV8v6OpMuO5arojRCTtCc5tsDhbzMaw==
   dependencies:
-    "@types/react" "*"
+    "@types/react" "^16"
 
 "@types/react-helmet@^6.1.0":
   version "6.1.5"
@@ -1406,7 +1406,7 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@16.8.5", "@types/react@^16.8.5", "@types/react@^16.x":
+"@types/react@*", "@types/react@16.8.5", "@types/react@^16", "@types/react@^16.8.5", "@types/react@^16.x":
   version "16.8.5"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.5.tgz#03b9a6597bc20f6eaaed43f377a160f7e41c2b90"
   integrity sha512-8LRySaaSJVLNZb2dbOGvGmzn88cbAfrgDpuWy+6lLgQ0OJFgHHvyuaCX4/7ikqJlpmCPf4uazJAZcfTQRdJqdQ==
@@ -3187,9 +3187,9 @@ cssstyle@^2.2.0:
     cssom "~0.3.6"
 
 csstype@^2.2.0:
-  version "2.6.14"
-  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.14.tgz#004822a4050345b55ad4dcc00be1d9cf2f4296de"
-  integrity sha512-2mSc+VEpGPblzAxyeR+vZhJKgYg0Og0nnRi7pmRXFYYxSfnOnW8A5wwQb4n4cE2nIOzqKOAzLCaEX6aBmNEv8A==
+  version "2.6.21"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.21.tgz#2efb85b7cc55c80017c66a5ad7cbd931fda3a90e"
+  integrity sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==
 
 csstype@^3.0.2:
   version "3.0.6"
